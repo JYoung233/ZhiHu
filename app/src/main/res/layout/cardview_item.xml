@@ -6,6 +6,7 @@
     android:layout_height="200dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
+    android:layout_margin="10dp"
     >
     <LinearLayout
         android:layout_margin="5dp"
@@ -41,13 +42,14 @@
        <LinearLayout
            android:layout_margin="5dp"
            android:layout_width="match_parent"
-           android:layout_height="0"
-           android:layout_weight="1"
+           android:layout_height="100dp"
+
            android:orientation="vertical">
            <TextView
                android:id="@+id/title"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:textColor="#1e1e1e"
                android:textSize="30px"
                android:textStyle="bold"
                android:text="你最意想不到的一笔收入是怎么来的"
@@ -58,6 +60,7 @@
                android:layout_marginBottom="5dp"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
+               android:textColor="#1e1e1e"
                android:textSize="25px"
                android:text="@string/content"/>
 
