@@ -57,8 +57,7 @@
                android:layout_marginTop="10dp"
                android:layout_marginBottom="5dp"
                android:layout_width="match_parent"
-               android:layout_height="0"
-               android:layout_weight="1"
+               android:layout_height="match_parent"
                android:textSize="25px"
                android:text="@string/content"/>
 
