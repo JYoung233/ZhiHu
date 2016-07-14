@@ -18,7 +18,17 @@
            android:minHeight="?attr/actionBarSize"
            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
            app:layout_scrollFlags="scroll|enterAlways"
-           />
+           >
+           <Button
+               android:id="@+id/search_bar"
+               android:hint="搜索话题,问题或人"
+               android:background="@drawable/edit_shape"
+               android:drawableRight="@android:drawable/ic_input_add"
+               android:drawableLeft="@android:drawable/ic_menu_search"
+               android:layout_margin="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" />
+       </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
