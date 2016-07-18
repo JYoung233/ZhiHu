@@ -15,7 +15,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SearchViewTest"/>
-
+        <activity android:name=".Main_Page2"/>
     </application>
 
 </manifest>

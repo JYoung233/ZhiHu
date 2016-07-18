@@ -2,57 +2,163 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-       <android.support.v7.widget.Toolbar
-           android:id="@+id/toolbar"
-           android:layout_width="match_parent"
-           android:layout_height="50dp"
-           android:minHeight="?attr/actionBarSize"
-           app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-           app:layout_scrollFlags="scroll|enterAlways"
-           >
-           <Button
-               android:id="@+id/search_bar"
-               android:hint="搜索话题,问题或人"
-               android:background="@drawable/edit_shape"
-               android:drawableRight="@android:drawable/ic_input_add"
-               android:drawableLeft="@android:drawable/ic_menu_search"
-               android:layout_margin="5dp"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent" />
-       </android.support.v7.widget.Toolbar>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            >
+            <Button
+                android:id="@+id/search_bar"
+                android:hint="搜索话题,问题或人"
+                android:background="@drawable/edit_shape"
+                android:drawableRight="@android:drawable/ic_input_add"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:layout_margin="5dp"
+                android:alpha="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-    </android.support.v7.widget.RecyclerView>
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tablist"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#ffffff"
-            app:tabGravity="fill"
-            app:tabMode="fixed"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:layout_scrollFlags="scroll|enterAlways"
+       <android.support.design.widget.FloatingActionButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/write"
+           app:fabSize="mini"
+           android:visibility="gone"
+           android:layout_marginRight="30dp"
+           android:layout_marginBottom="130dp"
+           app:elevation="4dp"
+           app:backgroundTint="#33a3dc"
+           android:layout_gravity="bottom|end"
+           android:src="@android:drawable/ic_menu_edit"
+
+           />
+
+
+
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="60dp"
+        app:layout_behavior="com.yangyang.zhihu.MyFabBehavior"
+        android:tint="@android:color/white"
+        android:src="@android:drawable/ic_input_add"
+        app:elevation="5dp"
+
+        />
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:background="#ffff"
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        app:layout_behavior="com.yangyang.zhihu.FooterBehavior">
+       <LinearLayout
+           android:id="@+id/page1"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center"
+           >
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@android:drawable/ic_menu_agenda"
+               />
+       </LinearLayout>
+        <LinearLayout
+            android:id="@+id/page2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
             >
-            </android.support.design.widget.TabLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_compass"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/page3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_slideshow"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/page4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_myplaces"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/page5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_mapmode"
+                />
+        </LinearLayout>
 
-
-
+    </LinearLayout>
+<TextView
+    android:id="@+id/cloud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:visibility="gone"/>
 
 
 </android.support.design.widget.CoordinatorLayout>
+

@@ -10,9 +10,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorHeight">0dp</item>
-        <item name="tabPaddingStart">12dp</item>
-        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabIndicatorColor">#ffff</item>
+        <item name="tabSelectedTextColor">#ffff</item>
+
+        <item name="android:textColor">#afb4db</item>
+
 
     </style>
 
